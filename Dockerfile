@@ -1,4 +1,8 @@
 ARG DOCKER_TAG
 FROM ruby:${DOCKER_TAG}
 
-RUN apk add libffi-dev
+RUN apt-get update \
+    && apt-get install --no-install-recommends -y \
+    libffi-dev \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*

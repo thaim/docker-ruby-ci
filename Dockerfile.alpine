@@ -1,0 +1,4 @@
+ARG DOCKER_TAG
+FROM ruby:${DOCKER_TAG}
+
+RUN apk add build-base libffi-dev
