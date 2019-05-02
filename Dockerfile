@@ -1,4 +1,4 @@
-FROM ruby:2.6.3-alpine3.9
-
+ARG DOCKER_TAG
+FROM ruby:${DOCKER_TAG}
 
 RUN apk add libffi-dev
